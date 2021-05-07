@@ -9,8 +9,23 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 07 May 2021 18:57:56 GMT</pubDate>
+    <pubDate>Fri, 07 May 2021 19:03:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>test2</title>
+      <link>http://june0122.github.io/2021/05/08/test2/</link>
+      <guid>http://june0122.github.io/2021/05/08/test2/</guid>
+      <pubDate>Fri, 07 May 2021 19:03:56 GMT</pubDate>
+      
+      
+      
+      
+      
+      
+      <comments>http://june0122.github.io/2021/05/08/test2/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>test</title>
