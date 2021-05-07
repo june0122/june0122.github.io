@@ -4,12 +4,22 @@
 
     <sitemap>
         <loc>http://june0122.github.io/post-sitemap.xml</loc>
-        <lastmod>2021-05-07T17:50:15.780Z</lastmod>
+        <lastmod>2021-05-07T20:45:57.337Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://june0122.github.io/page-sitemap.xml</loc>
         <lastmod>2021-05-07T18:54:50.785Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://june0122.github.io/category-sitemap.xml</loc>
+        <lastmod>2021-05-07T20:45:57.337Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://june0122.github.io/tag-sitemap.xml</loc>
+        <lastmod>2021-05-07T20:45:57.337Z</lastmod>
     </sitemap>
 
 </sitemapindex>
