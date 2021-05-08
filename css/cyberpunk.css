@@ -10804,6 +10804,15 @@ article.media .media-content .title {
   margin: 0;
   line-height: inherit;
 }
+article.article .title {
+  margin-top: 0 !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  font-size: 2em;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
 article.article .article-meta,
 article.article .article-tags {
   color: #848484;
@@ -10815,15 +10824,35 @@ article.article .article-meta {
 article.article .content {
   word-wrap: break-word;
   font-size: 1.1rem;
+  line-height: 1.9em;
+  letter-spacing: -0.3px;
+  color: #5d686f;
+  margin-top: 20px;
 }
 article.article .content h1 {
-  font-size: 1.75em;
+  margin-top: 0 !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  font-size: 2em;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
 }
 article.article .content h2 {
   font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
 }
 article.article .content h3 {
   font-size: 1.25em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
 }
 article.article .content h4 {
   font-size: 1.125em;
@@ -10835,18 +10864,17 @@ article.article .content pre {
   font-size: 0.85em;
 }
 article.article .content code {
-  padding: 0;
-  background: transparent;
+  color: #008fbf;
+  padding: 3px;
+  border-radius: 5px;
+  background: #f0f0f0;
   overflow-wrap: break-word;
 }
-article.article .content blockquote.pullquote {
-  float: right;
-  max-width: 50%;
-  font-size: 1.15rem;
-  position: relative;
-}
-article.article .content blockquote footer strong + cite {
-  margin-left: 0.5em;
+article.article .content blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.3em solid #dfe2e5;
+  background: none;
 }
 article.article .content .message.message-immersive {
   border-radius: 0;
@@ -11659,6 +11687,7 @@ figure.highlight .section {
     padding: 1.5rem 1rem;
   }
 }
+@import url("https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css");
 body {
   counter-reset: card;
 }
