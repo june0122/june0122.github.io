@@ -10806,11 +10806,9 @@ article.media .media-content .title {
 article.article .title {
   margin-top: 0 !important;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #eaecef;
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 16px;
   font-weight: 600;
-  line-height: 1.25;
 }
 article.article .article-meta,
 article.article .article-tags {
