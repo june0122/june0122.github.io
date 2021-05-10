@@ -3,7 +3,7 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>KAMIYU&#39;s BLOG</title>
+    <title>카미유 테크 블로그</title>
     <link>http://june0122.github.io/</link>
     
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
