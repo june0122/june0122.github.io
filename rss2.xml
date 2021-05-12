@@ -9,7 +9,7 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 12 May 2021 17:33:09 GMT</pubDate>
+    <pubDate>Wed, 12 May 2021 17:33:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,7 @@
       <guid>http://june0122.github.io/2021/05/13/04%20UI%20%EC%83%81%ED%83%9C%20%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0/</guid>
       <pubDate>Wed, 12 May 2021 17:30:08 GMT</pubDate>
       
-      <description>&lt;b&gt;ViewModel&lt;b&gt;은 특정 액티비티 화면과 연동되며, 해당 화면에 보여줄 데이터를 형식화하는 로직을 두기 좋은 곳이다. ViewModel은 모델 객체와 연동되어 모델을 &#39;장식한다&#39;. 즉, 모델 데이터를 화면에 보여주는 기능을 ViewModel이 수행한다. ViewModel을 사용하면 화면에서 필요한 모든 데이터를 한곳에서 종합하고 데이터를 형식화할 수 있다.</description>
+      <description>&lt;b&gt;ViewModel&lt;/b&gt;은 특정 액티비티 화면과 연동되며, 해당 화면에 보여줄 데이터를 형식화하는 로직을 두기 좋은 곳이다. ViewModel은 모델 객체와 연동되어 모델을 &#39;장식한다&#39;. 즉, 모델 데이터를 화면에 보여주는 기능을 ViewModel이 수행한다. ViewModel을 사용하면 화면에서 필요한 모든 데이터를 한곳에서 종합하고 데이터를 형식화할 수 있다.</description>
       
       
       
