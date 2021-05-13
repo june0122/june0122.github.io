@@ -9,11 +9,11 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 13 May 2021 13:03:42 GMT</pubDate>
+    <pubDate>Thu, 13 May 2021 13:05:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[Android] Data Class</title>
+      <title>[Kotlin] Data Class</title>
       <link>http://june0122.github.io/2021/05/13/Kotlin%20-%20Data%20Class/</link>
       <guid>http://june0122.github.io/2021/05/13/Kotlin%20-%20Data%20Class/</guid>
       <pubDate>Thu, 13 May 2021 12:58:54 GMT</pubDate>
