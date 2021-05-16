@@ -9,13 +9,13 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 16 May 2021 23:35:55 GMT</pubDate>
+    <pubDate>Sun, 16 May 2021 23:43:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[Android] Intent, 액티비티 간 데이터 전달</title>
-      <link>http://june0122.github.io/2021/05/17/06%20%E1%84%83%E1%85%AE%20%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%8B%E1%85%A2%E1%86%A8%E1%84%90%E1%85%B5%E1%84%87%E1%85%B5%E1%84%90%E1%85%B5%20%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5/</link>
-      <guid>http://june0122.github.io/2021/05/17/06%20%E1%84%83%E1%85%AE%20%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%8B%E1%85%A2%E1%86%A8%E1%84%90%E1%85%B5%E1%84%87%E1%85%B5%E1%84%90%E1%85%B5%20%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5/</guid>
+      <title>[Android] Intent: 액티비티 간 데이터 전달</title>
+      <link>http://june0122.github.io/2021/05/17/android-bnr-06/</link>
+      <guid>http://june0122.github.io/2021/05/17/android-bnr-06/</guid>
       <pubDate>Sun, 16 May 2021 23:18:07 GMT</pubDate>
       
       <description>&lt;b&gt;인텐트(intent)&lt;/b&gt;는 컴포넌트가 운영체제와 통신하는 데 사용할 수 있는 객체다. 지금까지 보았던 컴포넌트는 액티비티뿐이지만, 컴포넌트에는 서비스, 브로드캐스트 수신자, 콘텐츠 제공자도 있다. 인텐트는 다목적 통신 도구로, 이것을 추상화한 Intent 클래스는 인텐트의 용도에 따라 서로 다른 생성자들을 제공한다. 여기서는 시작시킬 액티비티를 ActivityManager에 알려주려고 인텐트를 사용한다.</description>
@@ -35,14 +35,14 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/17/06%20%E1%84%83%E1%85%AE%20%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%8B%E1%85%A2%E1%86%A8%E1%84%90%E1%85%B5%E1%84%87%E1%85%B5%E1%84%90%E1%85%B5%20%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/17/android-bnr-06/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>[Kotlin] Data Class</title>
-      <link>http://june0122.github.io/2021/05/13/Kotlin%20-%20Data%20Class/</link>
-      <guid>http://june0122.github.io/2021/05/13/Kotlin%20-%20Data%20Class/</guid>
+      <link>http://june0122.github.io/2021/05/13/kotiln-data-class/</link>
+      <guid>http://june0122.github.io/2021/05/13/kotiln-data-class/</guid>
       <pubDate>Thu, 13 May 2021 12:58:54 GMT</pubDate>
       
       <description>어떤 클래스가 데이터를 저장하는 역할만을 수행한다면 toString, equals, hashCode를 반드시 오버라이드해야 한다. IntelliJ 같은 IDE는 이러한 메소드들을 자동으로 정의해주고, 작성된 메소드의 정확성과 일관성을 검사해준다. 하지만 코틀린은 더 편리하다! 이제는 이런 메소드를 IDE를 통해 생성할 필요도 없이 data라는 변경자를 클래스 앞에 붙이면 필요한 메소드를 컴파일러가 자동으로 만들어준다. data 변경자가 붙은 클래스를 &lt;b&gt;데이터 클래스&lt;/b&gt;라고 부른다.</description>
@@ -58,14 +58,14 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/13/Kotlin%20-%20Data%20Class/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/13/kotiln-data-class/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>[Android] ViewModel과 SIS</title>
-      <link>http://june0122.github.io/2021/05/13/04%20UI%20%EC%83%81%ED%83%9C%20%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0/</link>
-      <guid>http://june0122.github.io/2021/05/13/04%20UI%20%EC%83%81%ED%83%9C%20%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0/</guid>
+      <link>http://june0122.github.io/2021/05/13/android-bnr-04/</link>
+      <guid>http://june0122.github.io/2021/05/13/android-bnr-04/</guid>
       <pubDate>Wed, 12 May 2021 17:30:08 GMT</pubDate>
       
       <description>&lt;b&gt;ViewModel&lt;/b&gt;은 특정 액티비티 화면과 연동되며, 해당 화면에 보여줄 데이터를 형식화하는 로직을 두기 좋은 곳이다. ViewModel은 모델 객체와 연동되어 모델을 &#39;장식한다&#39;. 즉, 모델 데이터를 화면에 보여주는 기능을 ViewModel이 수행한다. ViewModel을 사용하면 화면에서 필요한 모든 데이터를 한곳에서 종합하고 데이터를 형식화할 수 있다.</description>
@@ -85,14 +85,14 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/13/04%20UI%20%EC%83%81%ED%83%9C%20%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/13/android-bnr-04/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>[Android] 액티비티 생명주기</title>
-      <link>http://june0122.github.io/2021/05/08/03%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%20%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</link>
-      <guid>http://june0122.github.io/2021/05/08/03%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%20%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</guid>
+      <link>http://june0122.github.io/2021/05/08/android-bnr-03/</link>
+      <guid>http://june0122.github.io/2021/05/08/android-bnr-03/</guid>
       <pubDate>Sat, 08 May 2021 00:53:46 GMT</pubDate>
       
       <description>Activity의 모든 인스턴스는 생명주기를 갖는다. 그리고 생명주기 동안에 액티비티는 네 가지 상태, 즉 실행 재개(resumed), 일시 중지(paused), 중단(stopped), 존재하지 않음(non-existent)으로 상호 전환된다. 또한, 각 전환이 발생할 때 액티비티에 상태 변경을 알려주는 Activity 함수들이 있으며, 이 함수들은 안드로이드가 자동 호출한다.</description>
@@ -112,14 +112,14 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/08/03%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%20%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/08/android-bnr-03/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>[Android] Model-View-Controller</title>
-      <link>http://june0122.github.io/2021/05/08/02%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%AA%A8%EB%8D%B8%20%EB%B7%B0%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC/</link>
-      <guid>http://june0122.github.io/2021/05/08/02%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%AA%A8%EB%8D%B8%20%EB%B7%B0%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC/</guid>
+      <link>http://june0122.github.io/2021/05/08/android-bnr-02/</link>
+      <guid>http://june0122.github.io/2021/05/08/android-bnr-02/</guid>
       <pubDate>Sat, 08 May 2021 00:51:19 GMT</pubDate>
       
       <description>안드로이드 API는 &lt;b&gt;모델-뷰-컨트롤러(MVC)&lt;/b&gt;라는 아키텍처에 맞추어 설계되었다. 애플리케이션의 어떤 객체든 &lt;b&gt;모델 객체&lt;/b&gt; 또는 &lt;b&gt;뷰 객체&lt;/b&gt; 또는 &lt;b&gt;컨트롤러 객체&lt;/b&gt;가 되어야 한다는 것이 MVC의 주요 관점이다.</description>
@@ -139,14 +139,14 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/08/02%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%AA%A8%EB%8D%B8%20%EB%B7%B0%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/08/android-bnr-02/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>[Android] View, Inflate, Listener</title>
-      <link>http://june0122.github.io/2021/05/08/01%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%B7%B0,%20%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8,%20%EB%A6%AC%EC%8A%A4%EB%84%88/</link>
-      <guid>http://june0122.github.io/2021/05/08/01%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%B7%B0,%20%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8,%20%EB%A6%AC%EC%8A%A4%EB%84%88/</guid>
+      <link>http://june0122.github.io/2021/05/08/android-bnr-01/</link>
+      <guid>http://june0122.github.io/2021/05/08/android-bnr-01/</guid>
       <pubDate>Fri, 07 May 2021 20:35:00 GMT</pubDate>
       
       <description>뷰(View)는 UI를 만드는데 사용되는 구성 요소로 장치 화면에 보이는 모든 것에 해당한다. 사용자가 화면을 보며 상호 작용하는 뷰는 위젯이며 안드로이드 SDK에는 많은 위젯이 포함되어 원하는 UI를 구성 할 수 있다. 모든 위젯은 View 클래스의 인스턴스이거나 View의 서브 클래스 중 하나의 인스턴스다. 뷰그룹(ViewGrop)은 View의 일종으로 다른 뷰를 포함하고 배치해 화면에 보여주지만 그 자신은 화면에 나타나지 않는다. 레이아웃도 뷰그룹이며 뷰그룹의 서브 클래스에는 ConstraintLayout이나 FrameLayout 등이 있다.</description>
@@ -166,7 +166,7 @@
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       
-      <comments>http://june0122.github.io/2021/05/08/01%20%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EB%B7%B0,%20%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8,%20%EB%A6%AC%EC%8A%A4%EB%84%88/#disqus_thread</comments>
+      <comments>http://june0122.github.io/2021/05/08/android-bnr-01/#disqus_thread</comments>
       
     </item>
     

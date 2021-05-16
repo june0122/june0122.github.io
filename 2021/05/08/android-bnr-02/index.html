@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>[Android] Model-View-Controller - 카미유 테크 블로그</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="카미유 테크 블로그"><meta name="msapplication-TileImage" content="/img/logo.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카미유 테크 블로그"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="안드로이드 API는 모델-뷰-컨트롤러(MVC)라는 아키텍처에 맞추어 설계되었다. 애플리케이션의 어떤 객체든 모델 객체 또는 뷰 객체 또는 컨트롤러 객체가 되어야 한다는 것이 MVC의 주요 관점이다."><meta property="og:type" content="blog"><meta property="og:title" content="[Android] Model-View-Controller"><meta property="og:url" content="http://june0122.github.io/2021/05/08/android-bnr-02/"><meta property="og:site_name" content="카미유 테크 블로그"><meta property="og:description" content="안드로이드 API는 모델-뷰-컨트롤러(MVC)라는 아키텍처에 맞추어 설계되었다. 애플리케이션의 어떤 객체든 모델 객체 또는 뷰 객체 또는 컨트롤러 객체가 되어야 한다는 것이 MVC의 주요 관점이다."><meta property="og:locale" content="ko_KR"><meta property="og:image" content="http://june0122.github.io/thumbnail/android.png"><meta property="article:published_time" content="2021-05-08T00:51:19.333Z"><meta property="article:modified_time" content="2021-05-16T23:42:17.287Z"><meta property="article:author" content="KAMIYU"><meta property="article:tag" content="Android"><meta property="article:tag" content="Kotlin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/thumbnail/android.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://june0122.github.io/2021/05/08/android-bnr-02/"},"headline":"[Android] Model-View-Controller","image":["http://june0122.github.io/thumbnail/android.png"],"datePublished":"2021-05-08T00:51:19.333Z","dateModified":"2021-05-16T23:42:17.287Z","author":{"@type":"Person","name":"KAMIYU"},"publisher":{"@type":"Organization","name":"카미유 테크 블로그","logo":{"@type":"ImageObject","url":"http://june0122.github.io/img/logo.svg"}},"description":"안드로이드 API는 모델-뷰-컨트롤러(MVC)라는 아키텍처에 맞추어 설계되었다. 애플리케이션의 어떤 객체든 모델 객체 또는 뷰 객체 또는 컨트롤러 객체가 되어야 한다는 것이 MVC의 주요 관점이다."}</script><link rel="canonical" href="http://june0122.github.io/2021/05/08/android-bnr-02/"><link rel="icon" href="/img/logo.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/rss2.xml" title="카미유 테크 블로그" type="application/rss+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="카미유 테크 블로그" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/june0122"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2021-05-08T00:51:19.333Z" title="2021. 5. 8. 오전 9:51:19">2021-05-08</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2021-05-16T23:42:17.287Z" title="2021. 5. 17. 오전 8:42:17">2021-05-17</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a><span> / </span><a class="link-muted" href="/categories/Android/Guide/">Guide</a></span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>회 방문</span></div></div><h1 class="title is-3 is-size-4-mobile">[Android] Model-View-Controller</h1><div class="content"><h2 id="데이터-클래스data-class"><a class="markdownIt-Anchor" href="#데이터-클래스data-class"></a> 데이터 클래스(data class)</h2>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> <span class="title">Question</span></span>(<span class="meta">@StringRes</span> <span class="keyword">val</span> texResId: <span class="built_in">Int</span>, <span class="keyword">val</span> answer: <span class="built_in">Boolean</span>)</span><br></pre></td></tr></table></figure>
+<p><code>@StringRes</code> 애노테이션은 없어도 되지만, 다음 두 가지 이유로 지정하는 것이 좋다.</p>
+<ol>
+<li>생성자에서 유효한 문자열 리소스 ID를 제공하는지를 컴파일 시점에서 Lint(안드로이드 스튜디오에 내장된 코드 검사기)가 검사한다. 따라서 유효하지 않은 리소스 ID가 생성자에 사용되어 런타임 시에 앱이 중단되는 것을 방지해준다.</li>
+<li>애노테이션을 지정함으로써 다른 개발자가 쉽게 코드를 알 수 있다.</li>
+</ol>
+<p>texResId의 타입이 String이 아니고 Int인 이유는 texResId 변수는 질문 문자열 리소스의 리소스 ID(항상 Int 타입)를 갖기 때문이다.</p>
+<!-- more -->
+<p>Question과 같은 클래스처럼 주로 데이터를 갖는 클래스가 많이 있으며, 그중에는 업무에 관련된 것도 있고 프로그램에서 필요해서 생성한 것도 있다. 이런 클래스들은 비즈니스 로직을 처리하는 함수보다는 주로 데이터를 저장하는 속성을 갖는다.</p>
+<ol>
+<li>따라서 클래스 인스턴스끼리 각 속성의 값을 비교하거나(<code>equals()</code> 함수)</li>
+<li>인스턴스를 컬렉션(HashMap 등)에 저장할 때 사용할 키 값(해시 코드)을 생성하는(<code>hashCode()</code> 함수) 기능이나</li>
+<li>속성값을 문자열로 쉽게 출력하는(<code>toString</code> 함수) 기능이 공통으로 필요하다.</li>
+</ol>
+<p>이런 이유로 코틀린에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/june0122/TIL/blob/master/KOTLIN/LAB/Data%20Classes.md"><strong>데이터 클래스(data class)</strong></a>라는 개념을 추가하였다. 즉, 클래스를 정의할 때 data 키워드를 지정하면 이 클래스를 데이터 클래스로 간주하며, 방금 설명했던 기능들을 처리해주는 함수들을 해당 클레스에 맞게 코틀린 컴파일러가 자동으로 생성해준다.</p>
+<blockquote>
+<p>GeoQuiz의 객체 다이어그램</p>
+</blockquote>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/117186172-8989fc80-ae15-11eb-860b-fcb4c8d573e2.jpeg">
+</p>
+<h2 id="모델-뷰-컨트롤러와-안드로이드"><a class="markdownIt-Anchor" href="#모델-뷰-컨트롤러와-안드로이드"></a> 모델-뷰-컨트롤러와 안드로이드</h2>
+<p>위 그림의 객체들은 세 부분, 즉 모델(Model), 컨트롤러(Controller), 뷰(View)로 분리됨에 주목하자. 안드로이드 API는 <strong>모델-뷰-컨트롤러</strong>(MVC)라는 아키텍처에 맞추어 설계되었다. 애플리케이션의 어떤 객체든 <strong>모델 객체</strong> 또는 <strong>뷰 객체</strong> 또는 <strong>컨트롤러 객체</strong>가 되어야 한다는 것이 MVC의 주요 관점이다.</p>
+<h3 id="모델-객체-model-object"><a class="markdownIt-Anchor" href="#모델-객체-model-object"></a> 모델 객체 (Model Object)</h3>
+<ul>
+<li>모델 객체는 애플리케이션의 '데이터’와 '비즈니스 로직’을 갖는다.</li>
+<li>모델 클래스는 앱과 관계가 있는 것들을 <strong>모델링</strong>한다.
+<ul>
+<li>ex) 사용자, 상품, 서버에 저장된 사진 등</li>
+</ul>
+</li>
+<li>모델 객체는 UI를 모른다. 데이터를 보존하고 관리하는 것이 유일한 목적이다.</li>
+<li>애플리케이션의 모든 모델 객체들은 <strong>모델 계층(model layer)</strong> 을 구성한다.
+<ul>
+<li>GeoQuiz의 모델 계층은 Question 클래스로 구성된다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="뷰-객체-view-object"><a class="markdownIt-Anchor" href="#뷰-객체-view-object"></a> 뷰 객체 (View Object)</h3>
+<ul>
+<li>뷰 객체는 자신을 화면에 그리는 방법과 터치와 같은 사용자의 입력에 응답하는 방법이다.
+<ul>
+<li>쉽게 말해, 화면에서 볼 수 있는 것이라면 그것은 뷰 객체다.</li>
+</ul>
+</li>
+<li>안드로이드는 구성 가능한 뷰 클래스를 풍부하게 제공하지만, 직접 커스텀 클래스를 생성할 수도 있다.</li>
+<li>애플리케이션의 뷰 객체들은 <strong>뷰 계층(view layer)</strong> 을 구성한다.
+<ul>
+<li>GeoQuiz의 뷰 계층은 res/layout/activity_main.xml 요소들로부터 인플레이트되는 위젯들로 구성된다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="컨트롤러-객체-controller-object"><a class="markdownIt-Anchor" href="#컨트롤러-객체-controller-object"></a> 컨트롤러 객체 (Controller Object)</h3>
+<ul>
+<li>컨트롤러 객체는 뷰와 모델 객체를 결속하여 '애플리케이션 로직’을 포함한다.</li>
+<li>컨트롤러 객체는 뷰 객체에 의해 촉발되는 다양한 이벤트에 응답하고 모델 객체 및 뷰 계층과 주고받는 데이터의 흐름을 관리한다.</li>
+<li>안드로이드에서 컨트롤러는 일반적으로 <strong>Activity</strong>나 <strong>Fragment</strong>의 서브 클래스이다.
+<ul>
+<li>GeoQuiz의 컨트롤러 계층은 MainActivity만으로 구성되어 있다.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>사용자 입력의 MVC 처리 흐름</p>
+</blockquote>
+<p align="center">
+<img width="700" src="https://user-images.githubusercontent.com/39554623/117189778-88f36500-ae19-11eb-9851-e7b834e0d185.png">
+</p>
+<h2 id="mvc-사용하기"><a class="markdownIt-Anchor" href="#mvc-사용하기"></a> MVC 사용하기</h2>
+<p>애플리케이션 기능이 많아지면 너무 복잡해져 이해하기 어려울 수 있다. 따라서 코드를 클래스로 분리하면 설계에 도움이 되고 전체를 이해하기도 쉬워진다. 개별적인 변수와 함수 대신 클래스 관점으로 생각할 수 있기 때문이다.</p>
+<p>이와 유사하게 클래스들을 모델과 뷰 그리고 컨트롤러 계층으로 분리하면 애플리케이션을 설계하고 이해하는 데 도움이 된다. 개별적인 클래스 대신 계층의 관점으로 생각할 수 있기 때문이다.</p>
+<p>MVC는 클래스를 재사용하기 쉽도록 해준다. 여러 일을 혼자서 처리하는 클래스보다는 제한된 책임을 갖는 클래스를 재사용하는 것이 더 쉽기 때문이다.</p>
+<p>MVC는 큰 앱은 물론 작고 같단한 앱에도 잘 적용되지만, 더 크고 복잡한 앱에서는 컨트롤러 계층이 훨씬 커지거나 복잡해질 수 있다. 대게는 액티비티나 다른 컨트롤러들을 가볍게(thin) 유지하려고 한다. 가벼운 액티비티는 가능한 한 비즈니스 로직을 적게 포함하기 때문이다. 그리고 앱의 컨트롤러를 가볍게 만드는 데 MVC가 더 이상 적합하지 않을 때는 <strong>MVVM</strong>(모델-뷰-뷰모델) 아키텍처가 그 대안이 될 수 있다.</p>
+<h2 id="tools-네임스페이스"><a class="markdownIt-Anchor" href="#tools-네임스페이스"></a> tools 네임스페이스</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span>&gt;</span>  // 레이아웃의 루트 태그에 tools 네임스페이스 추가</span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/question_text_view&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:padding</span>=<span class="string">&quot;24dp&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">tools:text</span>=<span class="string">&quot;@string/question_australia&quot;</span> /&gt;</span>  // tools 네임스페이스로 지정</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>이 네임스페이스를 사용하면 TextView 위젯의 속성을 오버라이드해 레이아웃 디자인에 해당 문자열 리소스를 보여줄 수 있다.
+<ul>
+<li>TextView에 <code>tools:text</code> 속성을 추가하면, 안드로이드 스튜디오가 <code>tools:text</code> 속성을 알 수 있게 레이아웃의 루트 태그에 tools 네임스페이스를 추가해야 한다.</li>
+</ul>
+</li>
+<li>tools 네임스페이스 속성들은 앱이 장치에서 실행되어 위젯들이 화면에 나타날 때는 무시된다.</li>
+<li><code>android:text</code>로 지정된 값은 런타임 시에 나타나고, <code>tools:text</code>로 지정된 값은 디자인 시에 보기 위해 사용된다.</li>
+</ul>
+<h2 id="화면-픽셀-밀도"><a class="markdownIt-Anchor" href="#화면-픽셀-밀도"></a> 화면 픽셀 밀도</h2>
+<p>안드로이드는 밀도에 독립적인 크기 단위를 제공한다. 따라서 서로 다른 화면 밀도에서 일정한 크기를 갖도록 그 단위를 사용하면 된다. 그리고 안드로이드가 그 단위를 런타임 시에 픽셀로 변환하므로 신경 쓸 필요도 없다.</p>
+<br>
+<p align="center">
+<img width="700" src="https://user-images.githubusercontent.com/39554623/117203388-e8597100-ae29-11eb-8899-4e9280695556.jpeg">
+</p>
+<br>
+<ul>
+<li>px: <strong>pixel(픽셀)</strong> 의 줄임말이다. 화면 밀도와는 무관하게 1픽셀은 화면의 1픽셀과 일치한다. 픽셀은 장치의 화면 밀도에 적합하게 조정되지 않으므로 사용을 권장하지 않는다,</li>
+<li>dp: <strong>density-independent pixel(밀도 독립적 필셀)</strong> 의 줄임말이다. 마진과 패딩 등의 크기를 픽셀 값으로 지정하지 않을 때 사용한다. <strong>1dp</strong>는 항상 장치 화면의 1/160인치이며, 화면 밀도와 무관하게 일정한 크기를 갖는다. 따라서 장치의 화면이 고밀도일 때는 더 많은 수의 화면 픽셀을 채우기 위해 dp를 사용한다.</li>
+<li>sp: <strong>scale-independent pixel(크기 독립적 픽셀)</strong> 의 줄임말이다. sp는 사용자의 폰트 크기 선택도 고려한 dp다. 주로 화면에 나타나는 텍스트의 크기를 설정하기 위해 사용한다.</li>
+<li>pt, mm, in: 포인트(1/72인치), 밀리미터, 인치로 크기를 지정할 수 있는 크기 단위이다. 그런데 모든 장치에 잘 맞도록 구성되지 않아 사용을 권장하지 않는다.</li>
+</ul>
+<p>실무에서는 dp와 sp를 사용하며, 안드로이드는 이 값들을 런타임 시에 픽셀로 변환한다.</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a><a class="link-muted mr-2" rel="tag" href="/tags/Kotlin/">Kotlin</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6095b3ecf472720011a9aa6c&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/05/08/android-bnr-03/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">[Android] 액티비티 생명주기</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/05/08/android-bnr-01/"><span class="level-item">[Android] View, Inflate, Listener</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><script src="https://utteranc.es/client.js" repo="june0122/blog-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://user-images.githubusercontent.com/39554623/117553944-71251680-b08f-11eb-99bc-0f317fb22422.gif" alt="KAMIYU"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KAMIYU</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">2</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/june0122" target="_blank" rel="external nofollow noopener noreferrer">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Github" href="https://github.com/june0122"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Naver" href="https://blog.naver.com/june0122"><i class="fas fa-feather-alt"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/Android/Guide/"><span class="level-start"><span class="level-item">Guide</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Kotlin/"><span class="level-start"><span class="level-item">Kotlin</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/05/17/android-bnr-06/"><img src="/thumbnail/android.png" alt="[Android] Intent: 액티비티 간 데이터 전달"></a></figure><div class="media-content"><p class="date"><time datetime="2021-05-16T23:18:07.821Z">2021-05-17</time></p><p class="title"><a href="/2021/05/17/android-bnr-06/">[Android] Intent: 액티비티 간 데이터 전달</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Guide/">Guide</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/13/kotiln-data-class/"><img src="/thumbnail/kotlin.png" alt="[Kotlin] Data Class"></a></figure><div class="media-content"><p class="date"><time datetime="2021-05-13T12:58:54.259Z">2021-05-13</time></p><p class="title"><a href="/2021/05/13/kotiln-data-class/">[Kotlin] Data Class</a></p><p class="categories"><a href="/categories/Kotlin/">Kotlin</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/13/android-bnr-04/"><img src="/thumbnail/android.png" alt="[Android] ViewModel과 SIS"></a></figure><div class="media-content"><p class="date"><time datetime="2021-05-12T17:30:08.057Z">2021-05-13</time></p><p class="title"><a href="/2021/05/13/android-bnr-04/">[Android] ViewModel과 SIS</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Guide/">Guide</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/08/android-bnr-03/"><img src="/thumbnail/android.png" alt="[Android] 액티비티 생명주기"></a></figure><div class="media-content"><p class="date"><time datetime="2021-05-08T00:53:46.877Z">2021-05-08</time></p><p class="title"><a href="/2021/05/08/android-bnr-03/">[Android] 액티비티 생명주기</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Guide/">Guide</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/08/android-bnr-02/"><img src="/thumbnail/android.png" alt="[Android] Model-View-Controller"></a></figure><div class="media-content"><p class="date"><time datetime="2021-05-08T00:51:19.333Z">2021-05-08</time></p><p class="title"><a href="/2021/05/08/android-bnr-02/">[Android] Model-View-Controller</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Guide/">Guide</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">5월 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kotlin/"><span class="tag">Kotlin</span><span class="tag">6</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="카미유 테크 블로그" height="28"></a><p class="is-size-7"><span>&copy; 2021 KAMIYU</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a><br><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">0</span>명의 사용자가 방문 함</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/june0122"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
