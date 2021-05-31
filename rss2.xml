@@ -9,7 +9,7 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 31 May 2021 16:29:56 GMT</pubDate>
+    <pubDate>Mon, 31 May 2021 16:32:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,7 @@
       <guid>http://june0122.github.io/2021/06/01/android-bnr-19/</guid>
       <pubDate>Mon, 31 May 2021 16:18:15 GMT</pubDate>
       
-      <description>안드로이드의 &lt;b&gt;데이터 바인딩 &lt;sup&gt;data binding&lt;/sup&gt;&lt;/b&gt; 은 Android JetPack 라이브러리 중 하나로 &lt;b&gt;UI 구성요소와 데이터를&lt;/b&gt; 프로그램적 방식으로 연결하지 않고, &lt;b&gt;선언적 형식으로 결합&lt;/b&gt;할 수 있게 해주는 지원 라이브러리를 말한다. 간단하게 말하면 XML파일에 data를 연결 &lt;sup&gt;binding&lt;/sup&gt;해서 사용하는 것을 의미한다.</description>
+      <description>안드로이드의 &lt;b&gt;데이터 바인딩 &lt;sup&gt;data binding&lt;/sup&gt;&lt;/b&gt; 은 Android Jetpack 라이브러리 중 하나로 &lt;b&gt;UI 구성요소와 데이터를&lt;/b&gt; 프로그램적 방식으로 연결하지 않고, &lt;b&gt;선언적 형식으로 결합&lt;/b&gt;할 수 있게 해주는 지원 라이브러리를 말한다. 간단하게 말하면 XML파일에 data를 연결 &lt;sup&gt;binding&lt;/sup&gt;해서 사용하는 것을 의미한다.</description>
       
       
       
