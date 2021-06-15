@@ -9,8 +9,37 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 13 Jun 2021 11:52:34 GMT</pubDate>
+    <pubDate>Tue, 15 Jun 2021 05:03:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[LeetCode] 2. Add Two Numbers</title>
+      <link>http://june0122.github.io/2021/06/15/leetcode-2/</link>
+      <guid>http://june0122.github.io/2021/06/15/leetcode-2/</guid>
+      <pubDate>Tue, 15 Jun 2021 04:59:28 GMT</pubDate>
+      
+      <description>2. Add Two Numbers</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="leetcode-2-add-two-numbers"><a class="markdownIt-Anchor" href="#leetcode-2-add-two-numbers"></a> <a href="https://leetcode.com/problems/add-two-numbers/">[LeetCode] 2. Add Two Numbers</a></h2><h3 id="kotlin"><a class="markdownIt-Anchor" href="#kotlin"></a> Kotlin</h3><blockquote><h3 id="자리올림smallcarrysmall-이용"><a class="markdownIt-Anchor" href="#자리올림smallcarrysmall-이용"></a> 자리올림<small>(carry)</small> 이용</h3></blockquote><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> ListNode.<span class="title">value</span><span class="params">()</span></span> = <span class="keyword">this</span>?.`<span class="keyword">val</span>` ?: <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">addTwoNumbers</span><span class="params">(l1: <span class="type">ListNode</span>?, l2: <span class="type">ListNode</span>?)</span></span>: ListNode? &#123;</span><br><span class="line">        <span class="keyword">var</span> (list1, list2) = l1 to l2</span><br><span class="line">        <span class="keyword">var</span> head = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">var</span> cur = head</span><br><span class="line">        <span class="keyword">var</span> carry = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (list1 != <span class="literal">null</span> || list2 != <span class="literal">null</span> || carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">val</span> x = list1?.value() ?: <span class="number">0</span></span><br><span class="line">            <span class="keyword">val</span> y = list2?.value() ?: <span class="number">0</span></span><br><span class="line">            <span class="keyword">val</span> sum = (x + y + carry) % <span class="number">10</span></span><br><span class="line">            carry = (x + y + carry) / <span class="number">10</span></span><br><span class="line">            cur?.next = ListNode(sum)</span><br><span class="line">            cur = cur.next</span><br><span class="line">            <span class="keyword">if</span> (list1 != <span class="literal">null</span>) list1 = list1.next</span><br><span class="line">            <span class="keyword">if</span> (list2 != <span class="literal">null</span>) list2 = list2.next</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head.next</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Runtime: 240 ms, faster than 18.40% of Kotlin online submissions for Add Two Numbers.</span><br><span class="line">Memory Usage: 43.6 MB, less than 11.74% of Kotlin online submissions for Add Two Numbers.</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="http://june0122.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="http://june0122.github.io/categories/Algorithm/LeetCode/">LeetCode</category>
+      
+      
+      <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
+      
+      <category domain="http://june0122.github.io/tags/Algorithm/">Algorithm</category>
+      
+      <category domain="http://june0122.github.io/tags/LeetCode/">LeetCode</category>
+      
+      
+      <comments>http://june0122.github.io/2021/06/15/leetcode-2/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[LeetCode] 1. Two Sum</title>
@@ -594,35 +623,6 @@
       
       
       <comments>http://june0122.github.io/2021/05/23/android-bnr-09/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Codility] CyclicRotation</title>
-      <link>http://june0122.github.io/2021/05/21/codility-cyclic-rotation/</link>
-      <guid>http://june0122.github.io/2021/05/21/codility-cyclic-rotation/</guid>
-      <pubDate>Fri, 21 May 2021 07:03:11 GMT</pubDate>
-      
-      <description>Lesson 2 - Arrays : CyclicRotation</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="lesson-2-arrays-cyclicrotation"><a class="markdownIt-Anchor" href="#lesson-2-arrays-cyclicrotation"></a> Lesson 2 - Arrays : <a href="https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/">CyclicRotation</a></h2><h2 id="소스"><a class="markdownIt-Anchor" href="#소스"></a> 소스</h2><h3 id="kotlin"><a class="markdownIt-Anchor" href="#kotlin"></a> kotlin</h3><blockquote><p>배열 인덱스 활용</p></blockquote><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">solution</span><span class="params">(A: <span class="type">IntArray</span>, K: <span class="type">Int</span>)</span></span>: IntArray &#123;</span><br><span class="line">    <span class="keyword">val</span> rotatedArray = IntArray(A.size)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> A.indices) &#123;</span><br><span class="line">        <span class="keyword">val</span> index = (i + K) % A.size</span><br><span class="line">        rotatedArray[index] = A[i]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> rotatedArray</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>Dequeue <sup>덱</sup> 활용</p></blockquote><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">solution</span><span class="params">(A: <span class="type">IntArray</span>, K: <span class="type">Int</span>)</span></span>: IntArray &#123;</span><br><span class="line">    <span class="keyword">val</span> dequeue = ArrayDeque&lt;<span class="built_in">Int</span>&gt;()</span><br><span class="line">    <span class="keyword">val</span> rotation = <span class="keyword">when</span>(A.size) &#123;</span><br><span class="line">        <span class="number">0</span> -&gt; <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span> -&gt; K % A.size</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dequeue.addAll(A.toList())</span><br><span class="line">    repeat(rotation) &#123; dequeue.addFirst(dequeue.removeLast()) &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> dequeue.toIntArray()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>IntArray A의 크기가 0인 경우 <code>java.lang.ArithmeticException: / by zero</code>이 발생하므로 A가 0인 경우 회전하지 않도록 값을 0으로 설정해줘야 한다.</p>]]></content:encoded>
-      
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/Codility/">Codility</category>
-      
-      
-      <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
-      
-      <category domain="http://june0122.github.io/tags/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/tags/Codility/">Codility</category>
-      
-      
-      <comments>http://june0122.github.io/2021/05/21/codility-cyclic-rotation/#disqus_thread</comments>
       
     </item>
     
