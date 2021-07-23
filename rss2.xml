@@ -9,7 +9,7 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 23 Jul 2021 21:58:07 GMT</pubDate>
+    <pubDate>Fri, 23 Jul 2021 21:58:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -27,7 +27,7 @@
       
       <category domain="http://june0122.github.io/categories/Android/">Android</category>
       
-      <category domain="http://june0122.github.io/categories/Android/Guide/">Guide</category>
+      <category domain="http://june0122.github.io/categories/Android/Documentation/">Documentation</category>
       
       
       <category domain="http://june0122.github.io/tags/Android/">Android</category>
