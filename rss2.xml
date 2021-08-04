@@ -9,8 +9,35 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 04 Aug 2021 13:55:54 GMT</pubDate>
+    <pubDate>Wed, 04 Aug 2021 23:19:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[프로그래밍 용어] 멱등성(idempotent)이란?</title>
+      <link>http://june0122.github.io/2021/08/05/term-idempotent/</link>
+      <guid>http://june0122.github.io/2021/08/05/term-idempotent/</guid>
+      <pubDate>Wed, 04 Aug 2021 22:19:57 GMT</pubDate>
+      
+      <description>멱등성&lt;small&gt;(idempotent)&lt;/small&gt;에 대한 개념</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>전산학이나 수학에서 사용하는 용어로 <b>연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질</b>, <b>연산을 여러 번 반복하여도 한 번만 수행된 것과 같은 성질</b>을 의미한다. 함수 <code>f(x)</code>를 예를 들면 다음과 같은 등식이 성립된다. 즉 메서드가 여러 번 실행되어도, 결과는 같으므로 <b>안전하게 사용</b>할 수 있는 성질이기도 하다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(f(x)) = f(x)</span><br></pre></td></tr></table></figure><p>등식으로만 처음 보면 감이 오지 않을 수 있는데 절대값을 구하기 위해 사용하는 <code>abs()</code> 함수가 바로 멱등성을 가지고 있다. 모든 <code>x</code>에 대해 <code>abs(abs(x)) = abs(x)</code>이기 대문이다.</p><p>수학적 정의에서 <code>x</code>가 객체의 상태를 나타내고, <code>f</code>가 해당 객체를 변경할 수 있는 연산이라는 점을 고려해보자. 예를 들어, <a href="https://docs.python.org/2/library/stdtypes.html#set">파이썬의 set</a>이 있고, 이것의 <code>discard</code> 메서드는 set에서 요소를 제거하고, 요소가 존재하지 않으면 아무 작업도 수행하지 않는다. 그러므로</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_set.discard(x)</span><br></pre></td></tr></table></figure><p>는 동일한 작업을 두 번 수행하는 것과 정확히 동일한 효과가 있다. <small>(참고로 <code>array.pop()</code>은 멱등적이지 않다)</small></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_set.discard(x)</span><br><span class="line">my_set.discard(x)</span><br></pre></td></tr></table></figure><p>멱등 연산은 작업 수행 요청이 최소 한 번 발생하도록 보장되지만 두 번 이상 발생할 수도 있는 <b>네트워크 프로토콜 설계에 자주 사용</b>된다. 작업이 멱등적이면 작업을 두 번 이상 수행해도 결과는 한 번만 수행된 것과 동일하기 때문에 문제가 없기 때문이다.</p><p>멱등은 <b>RESTful</b> 웹 서비스의 맥락에서 많이 언급된다. REST는 HTTP를 최대한 활용하여 프로그램에 웹 콘텐츠에 대한 액세스 권한을 부여하고, 일반적으로 HTTP 요청 및 응답 내에서 원격 프로시저 호출 스타일 서비스를 터널링하는 SOAP 기반 웹 서비스와 대조적으로 설정된다.</p><p>REST는 웹 애플리케이션을 <b>리소스</b><small>(예: Twitter 사용자 또는 Flickr 이미지)</small>로 구성한 다음 <code>POST</code>, <code>PUT</code>, <code>GET</code> 및 <code>DELETE</code>의 HTTP 메서드를 사용하여 해당 리소스를 생성, 업데이트, 읽기 및 삭제한다. 이중 <code>POST</code>를 제외한 나머지 HTTP 메서드를 사용하는 API<small>(<code>GET</code>, <code>PUT</code>, <code>DELETE</code>)</small>들이 멱등성이 유지되어야 한다.</p><p>멱등성은 REST에서 중요한 역할을 한다. REST 리소스 표현을 <code>GET</code>하고<small>(예: Flickr에서 jpeg 이미지 가져오기)</small> 작업이 실패하면 작업이 성공할 때까지 <code>GET</code>을 계속해서 반복할 수 있다. 웹 서비스의 경우 이미지를 몇 번 가져왔는지는 중요하지 않다. 마찬가지로 RESTful 웹 서비스를 사용하여 Twitter 계정 정보를 업데이트하는 경우 웹 서비스에서 확인을 받기 위해 필요한 만큼 새 정보를 <code>PUT</code> 할 수 있다. 천 번 <code>PUT</code> 하는 것은 한 번 <code>PUT</code> 하는 것과 같다. 마찬가지로 REST 리소스를 천 번 <code>DELETE</code>하는 것은 한 번 <code>DELETE</code>하는 것과 같다. 따라서 멱등성을 사용하면 통신 오류에 탄력적인 웹 서비스를 훨씬 쉽게 구성할 수 있다.</p><h2 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h2><ul><li>Stackoverflow : <a href="https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation">What is an idempotent operation?</a></li><li>NHN Cloud Meetup! : <a href="https://meetup.toast.com/posts/218">지속 가능한 소프트웨어를 위한 코딩 방법</a></li><li>Wikipedia : <a href="https://en.wikipedia.org/wiki/Idempotence">Idempotence</a></li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://june0122.github.io/categories/Terminology/">Terminology</category>
+      
+      
+      <category domain="http://june0122.github.io/tags/Terminology/">Terminology</category>
+      
+      <category domain="http://june0122.github.io/tags/Idempotent/">Idempotent</category>
+      
+      <category domain="http://june0122.github.io/tags/RESTful/">RESTful</category>
+      
+      
+      <comments>http://june0122.github.io/2021/08/05/term-idempotent/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[프로그래밍 용어] 리터럴(literal)과 상수(constant)란?</title>
@@ -586,37 +613,6 @@
       
       
       <comments>http://june0122.github.io/2021/07/15/leetcode-495/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[프로그래머스] 레벨 2 : 가장 큰 수</title>
-      <link>http://june0122.github.io/2021/07/13/programmers-42746/</link>
-      <guid>http://june0122.github.io/2021/07/13/programmers-42746/</guid>
-      <pubDate>Tue, 13 Jul 2021 09:59:37 GMT</pubDate>
-      
-      <description>[코딩테스트 고득점 Kit - 정렬] 레벨 2</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h3 id="문제-보기"><a class="markdownIt-Anchor" href="#문제-보기"></a> <a href="https://programmers.co.kr/learn/courses/30/lessons/42746">문제 보기</a></h3><p><code>정렬</code></p><h2 id="소스"><a class="markdownIt-Anchor" href="#소스"></a> 소스</h2><h3 id="kotlin"><a class="markdownIt-Anchor" href="#kotlin"></a> kotlin</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">solution</span><span class="params">(numbers: <span class="type">IntArray</span>)</span></span>: String &#123;</span><br><span class="line">        <span class="keyword">var</span> answer = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">var</span> tempArray = numbers.map &#123; it.toString() &#125;.toTypedArray()</span><br><span class="line">        </span><br><span class="line">        tempArray.sortWith(Comparator&lt;String&gt; &#123; a, b -&gt;</span><br><span class="line">            <span class="keyword">when</span> &#123;</span><br><span class="line">                a.length == b.length -&gt; b.compareTo(a)</span><br><span class="line">                <span class="keyword">else</span> -&gt; (b + a).compareTo(a + b)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (tempArray[<span class="number">0</span>] == <span class="string">&quot;0&quot;</span>) &#123;</span><br><span class="line">            answer = <span class="string">&quot;0&quot;</span></span><br><span class="line">            <span class="keyword">return</span> answer</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        tempArray.forEach &#123;</span><br><span class="line">            answer += it</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> answer</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/Programmers/">Programmers</category>
-      
-      
-      <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
-      
-      <category domain="http://june0122.github.io/tags/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/tags/Programmers/">Programmers</category>
-      
-      <category domain="http://june0122.github.io/tags/%EC%A0%95%EB%A0%AC/">정렬</category>
-      
-      
-      <comments>http://june0122.github.io/2021/07/13/programmers-42746/#disqus_thread</comments>
       
     </item>
     
