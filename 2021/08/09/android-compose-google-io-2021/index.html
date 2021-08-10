@@ -1,10 +1,27 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>[Android] Jetpack Compose 개요 - Google I/O 2021 - 카미유 테크 블로그</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="카미유 테크 블로그"><meta name="msapplication-TileImage" content="/img/logo.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카미유 테크 블로그"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Google I&amp;#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."><meta property="og:type" content="blog"><meta property="og:title" content="[Android] Jetpack Compose 개요 - Google I/O 2021"><meta property="og:url" content="http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"><meta property="og:site_name" content="카미유 테크 블로그"><meta property="og:description" content="Google I&amp;#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."><meta property="og:locale" content="ko_KR"><meta property="og:image" content="http://june0122.github.io/thumbnail/android.png"><meta property="article:published_time" content="2021-08-09T07:10:10.657Z"><meta property="article:modified_time" content="2021-08-09T07:15:13.179Z"><meta property="article:author" content="KAMIYU"><meta property="article:tag" content="Android"><meta property="article:tag" content="Kotlin"><meta property="article:tag" content="Jetpack"><meta property="article:tag" content="Compose"><meta property="article:tag" content="Google I/O 2021"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/thumbnail/android.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"},"headline":"[Android] Jetpack Compose 개요 - Google I/O 2021","image":["http://june0122.github.io/thumbnail/android.png"],"datePublished":"2021-08-09T07:10:10.657Z","dateModified":"2021-08-09T07:15:13.179Z","author":{"@type":"Person","name":"KAMIYU"},"publisher":{"@type":"Organization","name":"카미유 테크 블로그","logo":{"@type":"ImageObject","url":"http://june0122.github.io/img/logo.svg"}},"description":"Google I&#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."}</script><link rel="canonical" href="http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"><link rel="icon" href="/img/logo.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/rss2.xml" title="카미유 테크 블로그" type="application/rss+xml">
-</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="카미유 테크 블로그" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/june0122"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2021-08-09T07:10:10.657Z" title="2021. 8. 9. 오후 4:10:10">2021-08-09</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2021-08-09T07:15:13.179Z" title="2021. 8. 9. 오후 4:15:13">2021-08-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a><span> / </span><a class="link-muted" href="/categories/Android/Compose/">Compose</a></span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>회 방문</span></div></div><h1 class="title is-3 is-size-4-mobile">[Android] Jetpack Compose 개요 - Google I/O 2021</h1><div class="content"><h2 id="선언적-ui-툴킷smalldeclarative-ui-toolkitsmall"><a class="markdownIt-Anchor" href="#선언적-ui-툴킷smalldeclarative-ui-toolkitsmall"></a> 선언적 UI 툴킷<small>(Declarative UI Toolkit)</small></h2>
-<h2 id="선언적smalldeclarativesmall"><a class="markdownIt-Anchor" href="#선언적smalldeclarativesmall"></a> 선언적<small>(Declarative)</small></h2>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>[Android] Jetpack Compose 개요 - Google I/O 2021 - 카미유 테크 블로그</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="카미유 테크 블로그"><meta name="msapplication-TileImage" content="/img/logo.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카미유 테크 블로그"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Google I&amp;#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."><meta property="og:type" content="blog"><meta property="og:title" content="[Android] Jetpack Compose 개요 - Google I/O 2021"><meta property="og:url" content="http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"><meta property="og:site_name" content="카미유 테크 블로그"><meta property="og:description" content="Google I&amp;#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."><meta property="og:locale" content="ko_KR"><meta property="og:image" content="http://june0122.github.io/thumbnail/android.png"><meta property="article:published_time" content="2021-08-09T07:10:10.657Z"><meta property="article:modified_time" content="2021-08-10T06:03:14.946Z"><meta property="article:author" content="KAMIYU"><meta property="article:tag" content="Android"><meta property="article:tag" content="Kotlin"><meta property="article:tag" content="Jetpack"><meta property="article:tag" content="Compose"><meta property="article:tag" content="Google I/O 2021"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/thumbnail/android.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"},"headline":"[Android] Jetpack Compose 개요 - Google I/O 2021","image":["http://june0122.github.io/thumbnail/android.png"],"datePublished":"2021-08-09T07:10:10.657Z","dateModified":"2021-08-10T06:03:14.946Z","author":{"@type":"Person","name":"KAMIYU"},"publisher":{"@type":"Organization","name":"카미유 테크 블로그","logo":{"@type":"ImageObject","url":"http://june0122.github.io/img/logo.svg"}},"description":"Google I&#x2F;O 2021에서 발표한 Jetpack Compose에 대한 개요를 확인하고 선언적 UI 툴킷이 무엇인지, Compose를 사용하여 아름다운 UI를 구축하는 방법을 알아본다."}</script><link rel="canonical" href="http://june0122.github.io/2021/08/09/android-compose-google-io-2021/"><link rel="icon" href="/img/logo.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/rss2.xml" title="카미유 테크 블로그" type="application/rss+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="카미유 테크 블로그" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/june0122"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2021-08-09T07:10:10.657Z" title="2021. 8. 9. 오후 4:10:10">2021-08-09</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2021-08-10T06:03:14.946Z" title="2021. 8. 10. 오후 3:03:14">2021-08-10</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a><span> / </span><a class="link-muted" href="/categories/Android/Compose/">Compose</a></span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>회 방문</span></div></div><h1 class="title is-3 is-size-4-mobile">[Android] Jetpack Compose 개요 - Google I/O 2021</h1><div class="content"><h2 id="jetpack-compose의-등장-배경"><a class="markdownIt-Anchor" href="#jetpack-compose의-등장-배경"></a> Jetpack Compose의 등장 배경</h2>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128816157-8c2f051a-b69a-482c-a6a7-03aa66eb8aa7.png">
+</p>
+<p>새로운 UI 툴킷이 필요한 이유는 무엇일까?</p>
+<ul>
+<li>뷰 기반의 기존 툴킷은 벌써 10년 넘게 사용해왔다. 그 당시와는 기술이 달라졌다.</li>
+<li>기기 성능은 향상됐고 사용자들은 앱에 대한 더 높은 기대를 가지고 있다.</li>
+<li>UI는 훨씬 동적이고 표현이 풍부해졌다.</li>
+</ul>
+<p>Views로도 멋진 앱을 개발할 수 있지만 최신 아키텍처를 기반으로 하고 Kotlin을 활용하는 현대적 툴킷을 원한다는 의견이 많았다.</p>
+<ul>
+<li>구글에서도 기능과 개선 사항을 더욱 빠르게 적용하고 싶어했다.</li>
+<li>그래서 Jetpack Compose라는 선언형 독립형 툴킷<small>(declarative unbundled toolkit)</small>을 3년 전부터 개발하기 시작했다.</li>
+<li>API Surface가 안정화되어 2021년 2월에 첫 베타를 출시하였다.</li>
+<li>2021년 7월 28일, Jetpack Compose 1.0이 안정화 버전이 출시되었다. <small><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.android.com/jetpack/androidx/versions/all-channel#july_28_2021">릴리즈 노트</a></small></li>
+</ul>
+<h2 id="선언적-ui-툴킷smalldeclarative-ui-toolkitsmall"><a class="markdownIt-Anchor" href="#선언적-ui-툴킷smalldeclarative-ui-toolkitsmall"></a> 선언적 UI 툴킷<small>(Declarative UI Toolkit)</small></h2>
+<h2 id="1-선언적smalldeclarativesmall"><a class="markdownIt-Anchor" href="#1-선언적smalldeclarativesmall"></a> 1. 선언적<small>(Declarative)</small></h2>
 <p>최근 앱들은 데이터가 동적이고 실시간으로 업데이트 됨.</p>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128521129-ab2d133b-b3ec-4fb6-8f4c-a7441dad113d.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128815112-3838bc87-5064-439d-8fc2-28311c32df03.png">
 </p>
 <p>원래 Android Views를 사용하면 XML에 UI를 선언해야 하며, 데이터가 바뀌면 UI도 업데이트해야 하고 변형도 필요하다.</p>
 <ul>
@@ -12,7 +29,7 @@
 <li>애플리케이션 상태가 바뀔 때마다<small>(데이터베이스나 네트워크 호출이 로드되거나, 사용자 상호작용이 끝나면)</small> 이 새로운 정보로 UI를 업데이트해서 데이터를 동기화해야 하는데, View마다 상태가 다르고 각각 업데이트해야 하므로 그 과정이 복잡함 -&gt; 버그가 엄청나게 발생 가능, 개발자가 책임지고 모든 걸 업데이트해야 함</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128525224-cc8efb66-832b-44b8-b803-fafd1a75e614.gif">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128525224-cc8efb66-832b-44b8-b803-fafd1a75e614.gif">
 </p>
 <p>Compose와 같은 선언적 UI는 상태를 UI로 변환하는 다른 방식을 사용한다.</p>
 <ul>
@@ -30,7 +47,7 @@
 <p>문자열 리스트를 표시하는 간단한 구성 요소<small>(component)</small></p>
 </blockquote>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128526641-503403a2-36c4-48fa-9201-a413f368aa00.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128526641-503403a2-36c4-48fa-9201-a413f368aa00.png">
 </p>
 <p>Compose에서 UI 구성 요소는 <code>@Composable</code> 애노테이션이 달린 함수일 뿐이다.</p>
 <ul>
@@ -38,7 +55,7 @@
 <li>재사용 가능한 요소로 구성된 라이브러리로 UI를 나누는 것을 장려한다.</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128626022-3561ec1a-4e40-4267-b40a-b1ed8167a67b.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128626022-3561ec1a-4e40-4267-b40a-b1ed8167a67b.png">
 </p>
 <p>컴포저블 함수는 값을 반환하는 대신 UI를 전달<small>(emit)</small>한다.</p>
 <ul>
@@ -46,14 +63,14 @@
 <li>텍스트를 수직으로 배열하고 간단한 텍스트 레이블을 표시</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128626267-09db2334-13b4-4e7b-826c-2145b38393c0.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128626267-09db2334-13b4-4e7b-826c-2145b38393c0.png">
 </p>
 <p>완전한 Kotlin 구문과 제어 플로우로 UI를 생성하기</p>
 <ul>
 <li>기존의 메시지를 반복 실행하는 코드에서 조건에 따라 요소를 표시하는 코드로 변경</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128626399-9b0fae89-10cf-41c9-8bf6-46728c2769bb.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128626399-9b0fae89-10cf-41c9-8bf6-46728c2769bb.png">
 </p>
 <p><strong>컴포저블은 매개변수를 받을 수 있고 받아야만 한다.</strong></p>
 <ul>
@@ -68,7 +85,7 @@
 <p>상태가 바뀌거나 메시지 리스트가 바뀌었을 때, 컴포저블 함수를 실행하면 새 UI가 생성된다 -&gt; <b>재생성<small>(re-composing)</small></b></p>
 <p>메시지 목록은 어떻게 바뀔까?</p>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627037-b4f2db7d-2640-44ea-a07b-c3800f424cfa.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627037-b4f2db7d-2640-44ea-a07b-c3800f424cfa.png">
 </p>
 <p>콜 스택을 처리하는 동안 ViewModel이 메시지의 LiveData를 노출한다.</p>
 <ul>
@@ -78,7 +95,7 @@
 <li>컴파일러가 지능적이어서 입력이 변경된 컴포저블만 다시 실행하고 나머지는 건너뛰기에 매우 효율적이다.</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627179-ad4f61a2-3f52-4d37-8393-7a13a61c5a52.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627179-ad4f61a2-3f52-4d37-8393-7a13a61c5a52.png">
 </p>
 <p>각 컴포저블은 변경할 수 없다.</p>
 <ul>
@@ -91,7 +108,7 @@
 </li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627253-8c7ef68b-d74c-4b54-82b5-1346cdd5c100.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627253-8c7ef68b-d74c-4b54-82b5-1346cdd5c100.png">
 </p>
 <p>Checkbox는 선택되지 않은 상태가 기본이다.</p>
 <ul>
@@ -103,7 +120,7 @@
 </li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627316-71f0ad1d-5b32-4462-93e0-389bb6424cae.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627316-71f0ad1d-5b32-4462-93e0-389bb6424cae.png">
 </p>
 <p>Checkbox 선택 여부를 결정하는 로컬 변수를 넣어보자.</p>
 <ul>
@@ -123,7 +140,7 @@
 <li>검증을 실행해서 유효할 때만 디스플레이를 업데이트하고 싶은 경우, 코드로 완전히 통제하기 때문에 검증이 실패한 시점에 다시 돌아와서 변경을 취소할 필요가 없다.</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627697-b1f37a27-6c10-453f-b2ab-951439161b9b.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627697-b1f37a27-6c10-453f-b2ab-951439161b9b.png">
 </p>
 <p>Compose는 입력 데이터가 바뀌면 컴포저블 함수를 다시 실행한다고 하였다. 하지만 다시 실행하거나 재생성을 호출하더라도 유지하고 싶은 변수가 있을 것이다.</p>
 <ul>
@@ -132,7 +149,7 @@
 </ul>
 <p>위 예시에서는 이벤트 핸들링을 인라인으로 구현했지만, 다음 예시와 같이 대신에 state와 update lambda를 컴포저블의 매개변수로 전달하고 <b>단일 진실 공급원<small>(single source of truth)</small></b>으로 로직을 올릴 수 있다.</p>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128627828-312166bc-e7e5-4b65-b7df-bcaec67eedc4.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128627828-312166bc-e7e5-4b65-b7df-bcaec67eedc4.png">
 </p>
 <p>선언적 UI의 핵심은 특정 상태에서 UI의 형태를 완전히 <b>설명하고</b> 상태가 바뀌면 프레임워크에서 UI <b>업데이트를 처리</b>하는 것이다.</p>
 <ul>
@@ -140,7 +157,7 @@
 <li>The framework <b>updates</b> your UI when the state changes.</li>
 </ul>
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/39554623/128628063-ee977792-00b0-40db-9fc9-913e023961a0.png">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128628063-ee977792-00b0-40db-9fc9-913e023961a0.png">
 </p>
 <p>Compose는 여러 가지 애플리케이션 아키텍처와 호환되지만 단방향 데이터 플로우를 따르는 아키텍처와 잘 맞는다.</p>
 <ul>
@@ -149,6 +166,132 @@
 <li>ViewState 객체의 단일 스트림을 생성하면 상태 변경을 한 곳에서 처리하는 데 도움이 된다.</li>
 <li>전체적 화면 상태를 추론하고 오류를 낮추기 쉽다.</li>
 <li>이 패턴을 사용하면 간단하게 컴포저블을 테스트할 수 있다. 입력에 따라 완전히 제어되기 때문이다.</li>
+</ul>
+<h2 id="2-ui-툴킷smalltoolkitsmall"><a class="markdownIt-Anchor" href="#2-ui-툴킷smalltoolkitsmall"></a> 2. UI 툴킷<small>(Toolkit)</small></h2>
+<p>선언적 패러다임을 사용하면 UI를 쉽게 사용할 수 있는 이유를 알아보자.</p>
+<p>위에서 설명한 원칙에 따라 개발된 Compose는 풍부한 UI 구성 요소 툴킷을 제공한다.</p>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128806100-da1987b0-b6c4-4cde-8243-be8f80580252.gif">
+</p>
+<p>Jetpack Compose는 머티리얼 디자인 구성 요소와 테마 시스템을 구현한다.</p>
+<p align="center">
+<img width="300" src="https://user-images.githubusercontent.com/39554623/128806251-852b8cd0-37cc-4ad6-9fcb-a4603693ae81.png">
+</p>
+<p>애플리케이션을 조립하는 데 필요한 구성 요소도 제공한다.</p>
+<ul>
+<li><code>Button</code>, <code>Card</code>, <code>FAB</code>, <code>AppBar</code> 등</li>
+</ul>
+<p align="center">
+<img width="300" src="https://user-images.githubusercontent.com/39554623/128806465-0897fe3c-1dc0-4a6a-8825-d50ed64f7fc8.png">
+</p>
+<p>모든 구성 요소는 기본적으로 머티리얼 스타일링을 따른다.</p>
+<ul>
+<li>머티리얼 테마를 구현하기 때문에 모든 구성 요소를 자신의 브랜드에 맞게 체계적으로 커스터마이즈할 수 있다.</li>
+<li>원하는 색, 도형, 서체 스타일을 지정 가능</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128806739-08dc3efc-ddb4-4a92-9b3d-cf95c8caf4c7.png">
+</p>
+<p>Compose는 간단하지만 강력한 새로운 레이아웃 시스템을 제공한다.</p>
+<ul>
+<li>행<small>(row)</small>과 열<small>(column)</small>을 기반으로 하며 horizontal, vertical linear layout과 비슷하다고 볼 수 있다.</li>
+<li>하지만 View 시스템과 달리, Compose 레이아웃 모델은 여러 척도<small>(measure)</small>를 전달할 수 없어서 중첩된<small>(nested)</small> 레이아웃에 적합하다.</li>
+</ul>
+<p align="center">
+<img width="400" src="https://user-images.githubusercontent.com/39554623/128807597-2feee562-a11d-4925-8e68-90a15688e603.png">
+</p>
+<p align="center">
+<img width="400" src="https://user-images.githubusercontent.com/39554623/128807554-0a3c6242-fbf8-4533-8536-e6d8e4894dce.png">
+</p>
+<p>새로운 Compose DSL<small>(Domain-specific language, 도메인 특화 언어)</small>을 적용한 ConstraintLayout을 사용하면 더욱 복잡한 레이아웃을 표현할 수 있지만 맞춤형 레이아웃도 훨씬 간단하게 구현이 된다.</p>
+<ul>
+<li>척도와 배치를 직접 설정해서 적절한 레이아웃을 만들고 싶다면 함수를 구현하기만 하면 된다.</li>
+</ul>
+<p align="center">
+<img width="400" src="https://user-images.githubusercontent.com/39554623/128807928-6c04f4d3-7a06-4a1c-b574-5a4994730128.png">
+</p>
+<p>가장 기대가 큰 개선 사항은 새로운 애니메이션 시스템이다.</p>
+<ul>
+<li>훨씬 간단하게 사용 가능</li>
+<li>보다 효과적이고 간단하게 UI에 모션을 적용할 수 있다.</li>
+<li>Compose에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.android.com/training/constraint-layout/motionlayout">MotionLayout</a>을 가져오는 작업도 진행 중이다.</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128808428-3d25ee12-72fe-4d8c-a365-7132e8fb6f07.png">
+</p>
+<p>Compose에서는 테스트와 접근성이 1급 객체<small>(first-class citizens)</small>이다.</p>
+<ul>
+<li>UI에 병렬 트리를 생성하는 시맨틱<small>(semantic)</small> 시스템을 기반으로 한다.</li>
+<li>접근성 서비스에 더 많은 정보를 제공하거나, UI 요소를 매칭해서 어설션<small>(assertion)</small>하는 데 도움이 된다.</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128808455-3d85430b-47e5-4a65-98ff-4fbf65d62668.png">
+</p>
+<p>Compose는 테스트 기능을 극대화하는 전용 테스트 아티팩트를 제공하고 독립적으로 컴포저블을 테스트하는 간편한 API를 제공한다.</p>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128812945-ddc462a9-5592-413b-b952-b6097fea578a.png">
+</p>
+<p>Compose는 Kotlin으로만 개발됐고 우수한 언어 기능을 활용하여 강력하고 간결하면서도 직관적인 API를 구축하였다.</p>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128813059-334d2320-cb46-441e-8614-ead691c30b60.png">
+</p>
+<p>코루틴을 사용하면 간단한 비동기식 API를 작성할 수 있다.</p>
+<ul>
+<li>제스처, 애니메이션, 스크롤링 등을 설명
+<ul>
+<li>제스처를 애니메이션으로 핸드오프하는 것처럼 비동기식 이벤트를 결합한 코드를 간단하게 작성할 수 있다.</li>
+</ul>
+</li>
+<li>구조적 동시성<small>(structured concurrency)</small>을 통해 이런 취소와 정리를 제공한다.</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128813448-1c52c9b0-3c3d-4464-be48-a179940a5add.png">
+</p>
+<p>Kotlin은 툴링<small>(tooling)</small>으로 구성된 강력한 에코시스템이 있다.</p>
+<ul>
+<li>UI 구성 요소를 새로운 함수로 추출해서 간단하게 재사용할 수 있다.</li>
+</ul>
+<h2 id="3-built-for-interop"><a class="markdownIt-Anchor" href="#3-built-for-interop"></a> 3. Built for interop</h2>
+<blockquote>
+<p>interoperability : 상호 운용성</p>
+</blockquote>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128814913-a4cb5f4e-490a-417b-87cc-8456cae208e0.png">
+</p>
+<p>Jetpack Compose는 기존 View 시스템과 호환된다.</p>
+<ul>
+<li>Compose는 필요에 따라 점진적으로 도입할 수 있다.
+<ul>
+<li>화면의 작은 요소부터 시작해서 UI의 큰 부분이나 화면 전체를 교체하면 된다.</li>
+</ul>
+</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128814927-385840ad-8d1e-427d-9f9c-9a245f75efc6.png">
+</p>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128814933-5ee2c524-6124-4b7b-a26b-217c136ca506.png">
+</p>
+<p>Compose는 필요한 단계를 진행할 수 있도록 도와준다.</p>
+<ul>
+<li>Views에 Compose를 포함할 수 있고, 반대로 Compose에서 Views를 호스팅할 수도 있다.</li>
+<li>MapView의 광고처럼 아직 Compose로 구축하지 않은 콘텐츠를 표시할 때 유용하다.</li>
+<li>Compose로 점차 migrate하면서 원하는 속도대로 도입할 수 있다.</li>
+</ul>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/39554623/128814954-0e0f0c4a-9504-4e87-ac78-e5534903b75f.png">
+</p>
+<p>View와 상호 운용성 이외에도 다른 주요 라이브러리와의 통합을 제공한다.</p>
+<ul>
+<li>Compose는 기존 애플리케이션 아키텍처와도 호환돼서 처음부터 시작할 필요가 없다.
+<ul>
+<li>공통 이미지 로딩 라이브러리에는 래퍼를 제공하고 머티리얼 또는 AppCompat XML 테마를 Compose로 변환할 때는 어댑터를 제공한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=7Mf2175h3RQ">What’s new in Jetpack Compose | Session</a></li>
 </ul>
 </div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a><a class="link-muted mr-2" rel="tag" href="/tags/Kotlin/">Kotlin</a><a class="link-muted mr-2" rel="tag" href="/tags/Jetpack/">Jetpack</a><a class="link-muted mr-2" rel="tag" href="/tags/Compose/">Compose</a><a class="link-muted mr-2" rel="tag" href="/tags/Google-I-O-2021/">Google I/O 2021</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6095b3ecf472720011a9aa6c&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/05/android-compose-thinking-in-compose/"><span class="level-item">[Android] Jetpack Compose 기초 - Compose 이해하기</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><script src="https://utteranc.es/client.js" repo="june0122/blog-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://user-images.githubusercontent.com/39554623/117553944-71251680-b08f-11eb-99bc-0f317fb22422.gif" alt="KAMIYU"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KAMIYU</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">62</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">59</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/june0122" target="_blank" rel="external nofollow noopener noreferrer">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Github" href="https://github.com/june0122"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Naver" href="https://blog.naver.com/june0122"><i class="fas fa-feather-alt"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">32</span></span></a><ul><li><a class="level is-mobile" href="/categories/Algorithm/BOJ/"><span class="level-start"><span class="level-item">BOJ</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Algorithm/Codility/"><span class="level-start"><span class="level-item">Codility</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Algorithm/LeetCode/"><span class="level-start"><span class="level-item">LeetCode</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/Algorithm/Programmers/"><span class="level-start"><span class="level-item">Programmers</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">20</span></span></a><ul><li><a class="level is-mobile" href="/categories/Android/Compose/"><span class="level-start"><span class="level-item">Compose</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Android/Documentation/"><span class="level-start"><span class="level-item">Documentation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Android/Guide/"><span class="level-start"><span class="level-item">Guide</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Android/Memo/"><span class="level-start"><span class="level-item">Memo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Data-Structure/"><span class="level-start"><span class="level-item">Data Structure</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Kotlin/"><span class="level-start"><span class="level-item">Kotlin</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Kotlin/Coroutine/"><span class="level-start"><span class="level-item">Coroutine</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Terminology/"><span class="level-start"><span class="level-item">Terminology</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/08/09/android-compose-google-io-2021/"><img src="/thumbnail/android.png" alt="[Android] Jetpack Compose 개요 - Google I/O 2021"></a></figure><div class="media-content"><p class="date"><time datetime="2021-08-09T07:10:10.657Z">2021-08-09</time></p><p class="title"><a href="/2021/08/09/android-compose-google-io-2021/">[Android] Jetpack Compose 개요 - Google I/O 2021</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Compose/">Compose</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/05/android-compose-thinking-in-compose/"><img src="/thumbnail/android.png" alt="[Android] Jetpack Compose 기초 - Compose 이해하기"></a></figure><div class="media-content"><p class="date"><time datetime="2021-08-04T23:24:52.348Z">2021-08-05</time></p><p class="title"><a href="/2021/08/05/android-compose-thinking-in-compose/">[Android] Jetpack Compose 기초 - Compose 이해하기</a></p><p class="categories"><a href="/categories/Android/">Android</a> / <a href="/categories/Android/Compose/">Compose</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/05/term-idempotent/"><img src="/thumbnail/terminology.png" alt="[프로그래밍 용어] 멱등성(idempotent)이란?"></a></figure><div class="media-content"><p class="date"><time datetime="2021-08-04T22:19:57.846Z">2021-08-05</time></p><p class="title"><a href="/2021/08/05/term-idempotent/">[프로그래밍 용어] 멱등성(idempotent)이란?</a></p><p class="categories"><a href="/categories/Terminology/">Terminology</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/04/term-literal/"><img src="/thumbnail/terminology.png" alt="[프로그래밍 용어] 리터럴(literal)과 상수(constant)란?"></a></figure><div class="media-content"><p class="date"><time datetime="2021-08-03T19:40:58.501Z">2021-08-04</time></p><p class="title"><a href="/2021/08/04/term-literal/">[프로그래밍 용어] 리터럴(literal)과 상수(constant)란?</a></p><p class="categories"><a href="/categories/Terminology/">Terminology</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/02/boj-1756/"><img src="/thumbnail/baekjoon.png" alt="[BOJ] 1756번 : 피자 굽기"></a></figure><div class="media-content"><p class="date"><time datetime="2021-08-02T14:05:16.302Z">2021-08-02</time></p><p class="title"><a href="/2021/08/02/boj-1756/">[BOJ] 1756번 : 피자 굽기</a></p><p class="categories"><a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/BOJ/">BOJ</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">8월 2021</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">7월 2021</span></span><span class="level-end"><span class="level-item tag">20</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">6월 2021</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">5월 2021</span></span><span class="level-end"><span class="level-item tag">20</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Action-Bar/"><span class="tag">Action Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/App-Bar/"><span class="tag">App Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AppCompat/"><span class="tag">AppCompat</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BFS/"><span class="tag">BFS</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BOJ/"><span class="tag">BOJ</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Binary-Search/"><span class="tag">Binary Search</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bitmap/"><span class="tag">Bitmap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Codility/"><span class="tag">Codility</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compose/"><span class="tag">Compose</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Content-Provider/"><span class="tag">Content Provider</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Coroutine/"><span class="tag">Coroutine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CustomView/"><span class="tag">CustomView</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DFS/"><span class="tag">DFS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DP/"><span class="tag">DP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-Binding/"><span class="tag">Data Binding</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-Structure/"><span class="tag">Data Structure</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dialog/"><span class="tag">Dialog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DiffUtil/"><span class="tag">DiffUtil</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Espresso/"><span class="tag">Espresso</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Executors/"><span class="tag">Executors</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/File-Provider/"><span class="tag">File Provider</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fragment/"><span class="tag">Fragment</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Google-I-O-2021/"><span class="tag">Google I/O 2021</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Idempotent/"><span class="tag">Idempotent</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Intent/"><span class="tag">Intent</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Jetpack/"><span class="tag">Jetpack</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kotlin/"><span class="tag">Kotlin</span><span class="tag">60</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LeetCode/"><span class="tag">LeetCode</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linked-List/"><span class="tag">Linked List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MVVM/"><span class="tag">MVVM</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Menu/"><span class="tag">Menu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mockito/"><span class="tag">Mockito</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Programmers/"><span class="tag">Programmers</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Queue/"><span class="tag">Queue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RESTful/"><span class="tag">RESTful</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RecyclerView/"><span class="tag">RecyclerView</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Room/"><span class="tag">Room</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Simulation/"><span class="tag">Simulation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SoundPool/"><span class="tag">SoundPool</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stack/"><span class="tag">Stack</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Terminology/"><span class="tag">Terminology</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Toolbar/"><span class="tag">Toolbar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TouchEvent/"><span class="tag">TouchEvent</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tree/"><span class="tag">Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Unit-Test/"><span class="tag">Unit Test</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/View-Binding/"><span class="tag">View Binding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/findViewById/"><span class="tag">findViewById</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B7%B8%EB%9E%98%ED%94%84/"><span class="tag">그래프</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%B0%94%ED%82%B9%EB%8F%85/"><span class="tag">바킹독</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/"><span class="tag">백트래킹</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%99%84%EC%A0%84-%ED%83%90%EC%83%89/"><span class="tag">완전 탐색</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/"><span class="tag">완전탐색</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/"><span class="tag">이분탐색</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%A0%95%EB%A0%AC/"><span class="tag">정렬</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%95%B4%EC%8B%9C/"><span class="tag">해시</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="카미유 테크 블로그" height="28"></a><p class="is-size-7"><span>&copy; 2021 KAMIYU</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a><br><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">0</span>명의 사용자가 방문 함</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/june0122"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
