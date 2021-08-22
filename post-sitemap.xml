@@ -9,8 +9,24 @@
 
 
     <url>
+        <loc>http://june0122.github.io/2021/07/19/data-structure-trees/</loc>
+        <lastmod>2021-08-22T11:25:26.859Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://june0122.github.io/2021/08/22/design-pattern-singleton/</loc>
+        <lastmod>2021-08-22T11:25:07.044Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://june0122.github.io/2021/08/21/design-pattern-delegate/</loc>
-        <lastmod>2021-08-21T09:33:49.448Z</lastmod>
+        <lastmod>2021-08-22T11:20:57.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -131,14 +147,6 @@
     <url>
         <loc>http://june0122.github.io/2021/07/23/boj-15649/</loc>
         <lastmod>2021-07-23T12:42:23.384Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://june0122.github.io/2021/07/19/data-structure-trees/</loc>
-        <lastmod>2021-07-19T14:53:36.312Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
