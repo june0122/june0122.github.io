@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>http://june0122.github.io/2021/08/22/design-pattern-singleton/</loc>
+        <lastmod>2021-09-01T14:30:59.832Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://june0122.github.io/2021/08/27/design-pattern-factory-method/</loc>
-        <lastmod>2021-08-27T12:57:18.272Z</lastmod>
+        <lastmod>2021-09-01T14:30:52.315Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -51,14 +59,6 @@
     <url>
         <loc>http://june0122.github.io/2021/07/19/data-structure-trees/</loc>
         <lastmod>2021-08-22T11:25:26.859Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://june0122.github.io/2021/08/22/design-pattern-singleton/</loc>
-        <lastmod>2021-08-22T11:25:07.044Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

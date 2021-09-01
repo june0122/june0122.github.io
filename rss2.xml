@@ -9,7 +9,7 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 27 Aug 2021 12:57:18 GMT</pubDate>
+    <pubDate>Wed, 01 Sep 2021 14:30:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,6 +26,8 @@
       
       
       <category domain="http://june0122.github.io/categories/Design-Pattern/">Design Pattern</category>
+      
+      <category domain="http://june0122.github.io/categories/Design-Pattern/Creational-Patterns/">Creational Patterns</category>
       
       
       <category domain="http://june0122.github.io/tags/Design-Pattern/">Design Pattern</category>
@@ -143,10 +145,14 @@
       
       <category domain="http://june0122.github.io/categories/Design-Pattern/">Design Pattern</category>
       
+      <category domain="http://june0122.github.io/categories/Design-Pattern/Creational-Patterns/">Creational Patterns</category>
+      
       
       <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
       
       <category domain="http://june0122.github.io/tags/Design-Pattern/">Design Pattern</category>
+      
+      <category domain="http://june0122.github.io/tags/Creational-Patterns/">Creational Patterns</category>
       
       
       <comments>http://june0122.github.io/2021/08/22/design-pattern-singleton/#disqus_thread</comments>
