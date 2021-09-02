@@ -9,8 +9,8 @@
 
 
     <url>
-        <loc>http://june0122.github.io/2021/08/22/design-pattern-singleton/</loc>
-        <lastmod>2021-09-01T14:30:59.832Z</lastmod>
+        <loc>http://june0122.github.io/2021/09/02/android-compose-meaning-of-emit/</loc>
+        <lastmod>2021-09-02T14:40:54.404Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +18,15 @@
 
     <url>
         <loc>http://june0122.github.io/2021/08/27/design-pattern-factory-method/</loc>
-        <lastmod>2021-09-01T14:30:52.315Z</lastmod>
+        <lastmod>2021-09-01T14:32:21.854Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://june0122.github.io/2021/08/22/design-pattern-singleton/</loc>
+        <lastmod>2021-09-01T14:30:59.832Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
