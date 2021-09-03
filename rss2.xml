@@ -9,7 +9,7 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 02 Sep 2021 14:40:54 GMT</pubDate>
+    <pubDate>Fri, 03 Sep 2021 13:47:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,7 @@
       <guid>http://june0122.github.io/2021/09/02/android-compose-meaning-of-emit/</guid>
       <pubDate>Thu, 02 Sep 2021 14:25:12 GMT</pubDate>
       
-      <description>Emit means that Compose inserts a new group into the current composition.</description>
+      <description>&#39;emit&#39; means that Compose inserts a new group into the current composition.</description>
       
       
       
