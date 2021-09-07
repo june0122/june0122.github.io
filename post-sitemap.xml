@@ -9,6 +9,30 @@
 
 
     <url>
+        <loc>http://june0122.github.io/2021/09/08/boj-2667/</loc>
+        <lastmod>2021-09-07T16:59:54.146Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://june0122.github.io/2021/09/08/boj-2178/</loc>
+        <lastmod>2021-09-07T16:59:48.431Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://june0122.github.io/2021/07/23/boj-2661/</loc>
+        <lastmod>2021-09-07T16:59:24.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://june0122.github.io/2021/09/06/design-pattern-abstract-factory/</loc>
         <lastmod>2021-09-06T12:51:42.746Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -147,14 +171,6 @@
     <url>
         <loc>http://june0122.github.io/2021/07/24/android-docs-view-binding/</loc>
         <lastmod>2021-07-23T21:58:37.789Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://june0122.github.io/2021/07/23/boj-2661/</loc>
-        <lastmod>2021-07-23T12:43:15.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
