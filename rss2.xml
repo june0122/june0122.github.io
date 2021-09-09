@@ -9,8 +9,39 @@
     <atom:link href="http://june0122.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 07 Sep 2021 16:59:54 GMT</pubDate>
+    <pubDate>Thu, 09 Sep 2021 08:09:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[BOJ] 1967번 : 숨바꼭질</title>
+      <link>http://june0122.github.io/2021/09/09/boj-1967/</link>
+      <guid>http://june0122.github.io/2021/09/09/boj-1967/</guid>
+      <pubDate>Thu, 09 Sep 2021 08:07:30 GMT</pubDate>
+      
+      <description>[BFS] 백준 알고리즘 1967번, 숨바꼭질</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="문제-보기"><a class="markdownIt-Anchor" href="#문제-보기"></a> <a href="https://www.acmicpc.net/problem/1967">문제 보기</a></h2><h3 id="kotlin"><a class="markdownIt-Anchor" href="#kotlin"></a> kotlin</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = with(Scanner(System.`<span class="keyword">in</span>`)) &#123;</span><br><span class="line">    <span class="keyword">val</span> (n, k) = nextInt() to nextInt()</span><br><span class="line">    <span class="keyword">val</span> line = Array(<span class="number">100001</span>) &#123; -<span class="number">1</span> &#125;</span><br><span class="line">    <span class="keyword">val</span> queue: Queue&lt;<span class="built_in">Int</span>&gt; = LinkedList()</span><br><span class="line"></span><br><span class="line">    line[n] = <span class="number">0</span></span><br><span class="line">    queue.offer(n)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (queue.isNotEmpty()) &#123;</span><br><span class="line">        <span class="keyword">val</span> current = queue.poll()</span><br><span class="line">        <span class="keyword">val</span> dx = intArrayOf(<span class="number">1</span>, -<span class="number">1</span>, current)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (dir <span class="keyword">in</span> dx.indices) &#123;</span><br><span class="line">            <span class="keyword">val</span> next = current + dx[dir]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (next &lt; <span class="number">0</span> || next &gt; <span class="number">100000</span>) <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> (line[next] != -<span class="number">1</span>) <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            line[next] = line[current] + <span class="number">1</span></span><br><span class="line">            queue.offer(next)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    print(line[k])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="http://june0122.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="http://june0122.github.io/categories/Algorithm/BOJ/">BOJ</category>
+      
+      
+      <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
+      
+      <category domain="http://june0122.github.io/tags/Algorithm/">Algorithm</category>
+      
+      <category domain="http://june0122.github.io/tags/BOJ/">BOJ</category>
+      
+      <category domain="http://june0122.github.io/tags/BFS/">BFS</category>
+      
+      
+      <comments>http://june0122.github.io/2021/09/09/boj-1967/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[BOJ] 2667번 : 단지번호붙이기</title>
@@ -582,37 +613,6 @@
       
       
       <comments>http://june0122.github.io/2021/07/24/android-docs-view-binding/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[BOJ] 15649번 : N과 M</title>
-      <link>http://june0122.github.io/2021/07/23/boj-15649/</link>
-      <guid>http://june0122.github.io/2021/07/23/boj-15649/</guid>
-      <pubDate>Fri, 23 Jul 2021 12:33:37 GMT</pubDate>
-      
-      <description>[백트래킹] 백준 알고리즘 15649번, N과 M</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="문제-보기"><a class="markdownIt-Anchor" href="#문제-보기"></a> <a href="https://www.acmicpc.net/problem/15649">문제 보기</a></h2><h2 id="소스"><a class="markdownIt-Anchor" href="#소스"></a> 소스</h2><h3 id="kotlin"><a class="markdownIt-Anchor" href="#kotlin"></a> kotlin</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> n = <span class="number">0</span></span><br><span class="line"><span class="keyword">var</span> m = <span class="number">0</span></span><br><span class="line"><span class="keyword">val</span> arr = IntArray(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">val</span> isUsed = BooleanArray(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = with(Scanner(System.`<span class="keyword">in</span>`)) &#123;</span><br><span class="line">    n = nextInt()</span><br><span class="line">    m = nextInt()</span><br><span class="line">    backTrack(<span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">backTrack</span><span class="params">(k : <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (k == m) &#123;</span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0</span> until m) &#123;</span><br><span class="line">            print(<span class="string">&quot;<span class="subst">$&#123;arr[i]&#125;</span> &quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        println()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span> .. n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isUsed[i].not()) &#123;</span><br><span class="line">            arr[k] = i</span><br><span class="line">            isUsed[i] = <span class="literal">true</span></span><br><span class="line">            backTrack(k+<span class="number">1</span>)</span><br><span class="line">            isUsed[i] = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/categories/Algorithm/BOJ/">BOJ</category>
-      
-      
-      <category domain="http://june0122.github.io/tags/Kotlin/">Kotlin</category>
-      
-      <category domain="http://june0122.github.io/tags/Algorithm/">Algorithm</category>
-      
-      <category domain="http://june0122.github.io/tags/BOJ/">BOJ</category>
-      
-      <category domain="http://june0122.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/">백트래킹</category>
-      
-      
-      <comments>http://june0122.github.io/2021/07/23/boj-15649/#disqus_thread</comments>
       
     </item>
     
