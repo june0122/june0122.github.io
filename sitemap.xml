@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://june0122.github.io/2026/04/15/kotlin-property-backing-field/</loc>
+    
+    <lastmod>2026-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://june0122.github.io/2026/03/27/cmp-dependency-resolution/</loc>
     
     <lastmod>2026-04-08</lastmod>
@@ -976,7 +985,7 @@
 
   <url>
     <loc>https://june0122.github.io/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -984,469 +993,476 @@
   
   <url>
     <loc>https://june0122.github.io/tags/Android/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Kotlin/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/KMP/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/AGP/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Gradle/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/migration/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Database/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Room/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/AppCompat/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/App-Bar/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Action-Bar/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Toolbar/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Menu/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Dialog/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/RecyclerView/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Fragment/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/DiffUtil/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Executors/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Intent/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Content-Provider/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Data-Binding/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/MVVM/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/File-Provider/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Bitmap/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Algorithm/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/BOJ/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/BFS/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Jetpack/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Compose/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Google-I-O-2021/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/CustomView/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/TouchEvent/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Unit-Test/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Mockito/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Espresso/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/SoundPool/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/View-Binding/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/findViewById/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/DFS/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EA%B7%B8%EB%9E%98%ED%94%84/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EB%B0%94%ED%82%B9%EB%8F%85/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Binary-Search/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/DP/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Codility/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Compose-Multiplatform/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/troubleshooting/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Coroutine/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Data-Structure/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Linked-List/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Design-Pattern/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Creational-Patterns/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Stack/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Tree/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Queue/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/LeetCode/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Simulation/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Programmers/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%ED%95%B4%EC%8B%9C/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Java/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EC%A0%95%EB%A0%AC/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/%EC%99%84%EC%A0%84-%ED%83%90%EC%83%89/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Terminology/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/Idempotent/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/tags/RESTful/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://june0122.github.io/tags/language/</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1455,119 +1471,119 @@
   
   <url>
     <loc>https://june0122.github.io/categories/Android/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Android/Guide/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Kotlin-Multiplatform/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Kotlin/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Android/Memo/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Android/Compose/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Algorithm/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Terminology/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Android/Documentation/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Algorithm/BOJ/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Algorithm/Codility/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Kotlin/Coroutine/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Data-Structure/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Design-Pattern/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Algorithm/LeetCode/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Design-Pattern/Creational-Patterns/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://june0122.github.io/categories/Algorithm/Programmers/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
